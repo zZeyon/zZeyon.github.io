@@ -102,3 +102,9 @@ a{
         padding-top: 2rem;
     }
 }
+
+.mi-logo {
+    width: 100px; /* Ajusta este valor a tu gusto */
+    height: auto;
+    margin-bottom: 10px;
+}
