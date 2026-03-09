@@ -119,3 +119,62 @@ a{
     
     margin-bottom: 10px;
 }
+
+/* Contenedor del icono de contacto */
+.contacto-wrapper {
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 10px;
+    color: #7A7C80;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto-wrapper:hover {
+    color: #fff;
+}
+
+/* La ventanita flotante (oculta por defecto) */
+.contacto-popup {
+    visibility: hidden;
+    width: 250px;
+    background-color: #1e2124;
+    color: #fff;
+    text-align: left;
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Aparece arriba del icono */
+    left: 50%;
+    margin-left: -125px; /* Centra la ventana */
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+}
+
+/* Triangulito de la ventana */
+.contacto-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e2124 transparent transparent transparent;
+}
+
+/* Mostrar al pasar el ratón */
+.contacto-wrapper:hover .contacto-popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contacto-popup p {
+    font-size: 0.9rem !important;
+    margin: 5px 0 !important;
+    color: #ccc;
+}
