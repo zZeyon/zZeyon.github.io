@@ -18,11 +18,20 @@
       <a href="https://linkedin.com/in/oscar-martinez-mazon"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/zZeyon"><i class="fab fa-github"></i></a>
       <div class="contacto-wrapper">
-        <i class="fas fa-envelope"></i>
-        <div class="contacto-popup">
-          <p><strong>Email:</strong> martinezmazonoscar04@gmail.com</p>
-          <p><strong>Tel:</strong> +34 600 000 000</p> </div>
-      </div>
+  <i class="fas fa-envelope"></i>
+  <div class="contacto-popup">
+    <div class="contacto-item">
+      <i class="fas fa-at"></i>
+      <span id="email-text">martinezmazonoscar04@gmail.com</span>
+      <button onclick="copiarTexto('email-text')" title="Copiar Email"><i class="far fa-copy"></i></button>
+    </div>
+    <div class="contacto-item">
+      <i class="fas fa-phone"></i>
+      <span id="tel-text">+34 600 000 000</span>
+      <button onclick="copiarTexto('tel-text')" title="Copiar Teléfono"><i class="far fa-copy"></i></button>
+    </div>
+  </div>
+</div>
     </div>
     <div class="section-2">
       <h2>About</h2>
@@ -43,4 +52,14 @@
     </div>
   </div>
 </body>
+
+<script>
+  function copiarTexto(id) {
+    const texto = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(texto).then(() => {
+      alert("¡Copiado al portapapeles!");
+    });
+  }
+</script>
+
 </html>
