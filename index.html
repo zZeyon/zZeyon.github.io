@@ -14,52 +14,52 @@
       <img src="img/logo_final.jpeg" alt="Logo de Oscar" class="mi-logo">
       <h2>Oscar</h2>
       <p>Zaragoza, Spain.</p>
-      <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-      <a href="https://linkedin.com/in/oscar-martinez-mazon"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/zZeyon"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/oscar-martinez-mazon" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/zZeyon" target="_blank"><i class="fab fa-github"></i></a>
+      
       <div class="contacto-wrapper">
-  <i class="fas fa-envelope"></i>
-  <div class="contacto-popup">
-    <div class="contacto-item">
-      <i class="fas fa-at"></i>
-      <span id="email-text">martinezmazonoscar04@gmail.com</span>
-      <button onclick="copiarTexto('email-text')" title="Copiar Email"><i class="far fa-copy"></i></button>
+        <i class="fas fa-envelope"></i>
+        <div class="contacto-popup">
+          <div class="contacto-item">
+            <i class="fas fa-at"></i>
+            <span id="email-text">martinezmazonoscar04@gmail.com</span>
+            <button onclick="copiarTexto('email-text')" title="Copiar Email"><i class="far fa-copy"></i></button>
+          </div>
+          <div class="contacto-item">
+            <i class="fas fa-phone"></i>
+            <span id="tel-text">+34 600 000 000</span>
+            <button onclick="copiarTexto('tel-text')" title="Copiar Teléfono"><i class="far fa-copy"></i></button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contacto-item">
-      <i class="fas fa-phone"></i>
-      <span id="tel-text">+34 600 000 000</span>
-      <button onclick="copiarTexto('tel-text')" title="Copiar Teléfono"><i class="far fa-copy"></i></button>
-    </div>
-  </div>
-</div>
-    </div>
+
     <div class="section-2">
       <h2>About</h2>
-      <p>Hello world! I'm Oscar I'm currently studying a double degree in Computer Science and Business Administration at the University of Zaragoza (Spain).
-        I'm focusing on learning different technologies that are essential for my career, such as Git and GitHub, while working on my own projects. I'm also dedicated to improving my English skills.
-        Feel free to reach out if you have any suggestions!.</p>
+      <p>Hello world! I'm Oscar. I'm currently studying a double degree in Computer Science and Business Administration at the University of Zaragoza (Spain)...</p>
+      
       <h2>Experience</h2>
       <p>...</p>
 
       <h2>Skills</h2>
-      <p>Basic programming in languages such as C, C++, Java, Python, HTML, CSS, JS</p>
+      <p>Basic programming: C, C++, Java, Python, HTML, CSS, JS</p>
+      
       <h2>Projects</h2>
       <a href="#">Project 1</a>
       <a href="#">Project 2</a>
       <a href="#">Project 3</a>
-      <a href="#">Project 4</a>
-      <a href="#">Project 5</a>
     </div>
   </div>
+
+  <script>
+    function copiarTexto(id) {
+      const texto = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert("¡Copiado al portapapeles!");
+      }).catch(err => {
+        console.error('Error al copiar: ', err);
+      });
+    }
+  </script>
 </body>
-
-<script>
-  function copiarTexto(id) {
-    const texto = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(texto).then(() => {
-      alert("¡Copiado al portapapeles!");
-    });
-  }
-</script>
-
 </html>
