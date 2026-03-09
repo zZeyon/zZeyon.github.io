@@ -23,9 +23,10 @@ a{
     color: #7A7C80;
     text-decoration: none;
 }
+
 /* section 1 */
 .section-1{
-    padding-top: 40vh;
+    padding-top: 10vh;
     text-align: center;
 }
 
@@ -44,6 +45,7 @@ a{
     font-size: 1.5rem;
     padding: 10px;
 }
+
 /* section 2 */
 .section-2{
     padding-top: 10vh;
@@ -68,6 +70,7 @@ a{
     padding-left: 0;
     width: 100px;
 }
+
 /* animations / utilities */
 .section-2 a:hover{
     font-size: 1.3rem;
@@ -101,14 +104,18 @@ a{
         padding-left: 1.5rem;
         padding-top: 2rem;
     }
+    .mi-logo {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .mi-logo {
     width: 400px;
     height: 400px;
     
-    border-radius: 20%; /* Esto crea la silueta circular */
-    object-fit: cover;  /* Esto asegura que tu logo no se deforme dentro del circulo, cortando lo que sobre si no es cuadrado */
+    border-radius: 20%;
+    object-fit: cover;
     
-    margin-bottom: 10px; /* Mantenemos el margen inferior */
+    margin-bottom: 10px;
 }
