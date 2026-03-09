@@ -104,8 +104,8 @@ a{
 }
 
 .mi-logo {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     
     border-radius: 20%; /* Esto crea la silueta circular */
     object-fit: cover;  /* Esto asegura que tu logo no se deforme dentro del circulo, cortando lo que sobre si no es cuadrado */
