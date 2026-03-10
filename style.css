@@ -5,13 +5,30 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    /* Este color de fondo sigue siendo la base */
     background-color: #101214;
     color: #7A7C80;
+    /* Aseguramos que el cuerpo ocupe toda la pantalla */
+    min-height: 100vh;
 }
 
+/* --- ESTILO DEL FONDO DE ESTRELLAS --- */
+#particles-canvas {
+    position: fixed; /* Esto es clave: lo fija a la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Capa de fondo, pero por encima de la base #101214 */
+    pointer-events: none; /* Deja pasar los clics para que funcionen tus enlaces */
+}
+
+/* --- ESTILO DEL CONTENIDO PRINCIPAL --- */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 1;         /* "Elevamos" todo el contenido sobre el fondo */
 }
 
 h2, .white { color: #fff; }
@@ -24,7 +41,17 @@ a { color: #7A7C80; text-decoration: none; }
 }
 
 .section-1 h2 { font-size: 1.7rem; margin-bottom: 10px; }
-.section-1 a { font-size: 1.5rem; padding: 10px; }
+.section-1 a { 
+    font-size: 1.5rem; 
+    padding: 10px; 
+    display: inline-block; /* Necesario para que la animación funcione en enlaces */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.section-1 a:hover { 
+    color: #fff; /* Se vuelve blanco */
+    transform: scale(1.2); /* Efecto de zoom sutil */
+}
 
 .mi-logo {
     width: 300px;
@@ -44,7 +71,17 @@ a { color: #7A7C80; text-decoration: none; }
     cursor: pointer;
 }
 
-.contacto-wrapper:hover { color: #fff; }
+/* Aplicamos la transición solo al icono del sobre */
+.contacto-wrapper > i.fa-envelope {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover igual que en LinkedIn y GitHub */
+.contacto-wrapper:hover > i.fa-envelope {
+    color: #fff;
+    transform: scale(1.2);
+}
 
 .contacto-popup {
     visibility: hidden;
@@ -152,4 +189,11 @@ a { color: #7A7C80; text-decoration: none; }
     .section-1 { padding-top: 5rem; }
     .section-2 { padding: 2rem 1.5rem; width: 90%; }
     .mi-logo { width: 200px; height: 200px; }
+    
+    /* Ajustes específicos de las Skills para móvil */
+    .skills-container {
+        gap: 10px; /* Reducimos la separación para que quepan mejor */
+        font-size: 1rem; /* Hacemos los iconos un poco más pequeños */
+        justify-content: center; /* Los centramos, en móvil suele quedar mejor */
+    }
 }
