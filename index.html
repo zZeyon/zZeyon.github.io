@@ -23,12 +23,12 @@
           <div class="contacto-item">
             <i class="fas fa-at"></i>
             <span id="email-text">martinezmazonoscar04@gmail.com</span>
-            <button onclick="copiarTexto('email-text')" title="Copiar Email"><i class="far fa-copy"></i></button>
+            <button onclick="copiarTexto('email-text', this)" title="Copiar Email"><i class="far fa-copy"></i></button>
           </div>
           <div class="contacto-item">
             <i class="fas fa-phone"></i>
             <span id="tel-text">+34 600 000 000</span>
-            <button onclick="copiarTexto('tel-text')" title="Copiar Teléfono"><i class="far fa-copy"></i></button>
+            <button onclick="copiarTexto('tel-text', this)" title="Copiar Teléfono"><i class="far fa-copy"></i></button>
           </div>
         </div>
       </div>
@@ -54,10 +54,23 @@
   </div>
 
   <script>
-    function copiarTexto(id) {
+    function copiarTexto(id, btn) {
       const texto = document.getElementById(id).innerText;
+      
       navigator.clipboard.writeText(texto).then(() => {
-        alert("¡Copiado al portapapeles!");
+        // Seleccionamos el icono dentro del botón pulsado
+        const icono = btn.querySelector('i');
+        
+        // Cambiamos el icono al tick y añadimos la clase de animación
+        icono.className = 'fas fa-check';
+        btn.classList.add('btn-copiado');
+
+        // Tras 2 segundos, devolvemos el botón a su estado original
+        setTimeout(() => {
+          icono.className = 'far fa-copy';
+          btn.classList.remove('btn-copiado');
+        }, 2000);
+
       }).catch(err => {
         console.error('Error al copiar: ', err);
       });

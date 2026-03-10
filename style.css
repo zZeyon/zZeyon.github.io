@@ -78,13 +78,31 @@ a { color: #7A7C80; text-decoration: none; }
     color: #eee;
 }
 
+/* Botón original más redondo */
 .contacto-item button {
     background: #333;
     border: none;
     color: #aaa;
-    padding: 5px 8px;
-    border-radius: 4px;
+    width: 32px; /* Ancho fijo */
+    height: 32px; /* Alto fijo */
+    border-radius: 50%; /* Esto lo hace un círculo perfecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para la animación */
+}
+
+.contacto-item button:hover {
+    background: #444;
+    color: #fff;
+}
+
+/* Animación y colores cuando se copia con éxito */
+.contacto-item button.btn-copiado {
+    background: #28a745; /* Fondo verde */
+    color: #fff;         /* Icono blanco */
+    transform: scale(1.1); /* Efecto de pequeño rebote/zoom */
 }
 
 /* section 2 */
