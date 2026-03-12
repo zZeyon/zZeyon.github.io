@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>zZeyon - Portfolio</title>
+  <link rel="icon" type="image/jpeg" href="../assets/img/logo_final_circular.png">
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  
+  <div class="lang-switch">
+      <button class="lang-btn" onclick="cambiarIdioma('en')">EN <i class="fas fa-globe"></i></button>
+  </div>
+
+  <div class="grid-2">
+    <div class="section-1">
+      <img src="../assets/img/logo_final.jpeg" alt="Logo de Oscar" class="mi-logo">
+      <h2>Oscar</h2>
+      <p>Zaragoza, España.</p>
+      <a href="https://linkedin.com/in/oscar-martinez-mazon" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/zZeyon" target="_blank"><i class="fab fa-github"></i></a>
+      
+      <div class="contacto-wrapper">
+        <i class="fas fa-envelope"></i>
+        <div class="contacto-popup">
+          <div class="contacto-item">
+            <i class="fas fa-at"></i>
+            <span id="email-text">martinezmazonoscar04@gmail.com</span>
+            <button onclick="copiarTexto('email-text', this)" title="Copiar Email"><i class="far fa-copy"></i></button>
+          </div>
+          <div class="contacto-item">
+            <i class="fas fa-phone"></i>
+            <span id="tel-text">+-- --- --- ---</span>
+            <button onclick="copiarTexto('tel-text', this)" title="Copiar Teléfono"><i class="far fa-copy"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-2">
+      <h2>Sobre mí</h2>
+      <p>¡Hola mundo! Soy Oscar.</p>
+      <p>Actualmente estudio un doble grado en Ingeniería Informática y Administración y Dirección de Empresas en la Universidad de Zaragoza (España).</p>
+      <p>Me estoy enfocando en aprender diferentes tecnologías esenciales para mi carrera, como Git y GitHub, mientras trabajo en mis propios proyectos. También dedico tiempo a mejorar mi nivel de inglés.</p>
+      
+      <h2>Experiencia</h2>
+      <p>...</p>
+
+      <h2>Habilidades</h2>
+      <p>Programación básica: C, C++, Java, Python, HTML, CSS, JS</p>
+      <div class="skills-container">
+        <i class="devicon-c-plain colored" title="C"></i>
+        <i class="devicon-cplusplus-plain colored" title="C++"></i>
+        <i class="devicon-java-plain colored" title="Java"></i>
+        <i class="devicon-python-plain colored" title="Python"></i>
+        <i class="devicon-html5-plain colored" title="HTML5"></i>
+        <i class="devicon-css3-plain colored" title="CSS3"></i>
+        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+      </div>
+      
+      <h2>Proyectos</h2>
+      <a href="#">Proyecto 1</a>
+      <a href="#">Proyecto 2</a>
+      <a href="#">Proyecto 3</a>
+    </div>
+  </div>
+
+  <script src="../assets/scripts.js"></script>
+</body>
+</html>

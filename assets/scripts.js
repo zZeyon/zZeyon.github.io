@@ -128,5 +128,22 @@ window.addEventListener('resize', function() {
   init();
 });
 
+/* --- SISTEMA DE CAMBIO DE IDIOMA --- */
+function cambiarIdioma(lang) {
+    // Guardamos la preferencia en el navegador para futuras visitas
+    localStorage.setItem('portfolio_lang', lang);
+    
+    // Obtenemos la URL actual y la partimos
+    // window.location.origin nos da "https://tu-usuario.github.io"
+    // Dependiendo de si estás en local o en github pages, construimos la ruta
+    
+    let basePath = window.location.pathname; // Ej: /tu-repo/es/ o /es/
+    
+    // Reemplazamos /es/ o /en/ por el nuevo idioma en la URL
+    let newPath = basePath.replace(/\/es\/|\/en\//, '/' + lang + '/');
+    
+    window.location.href = newPath;
+}
+
 init();
 animate();

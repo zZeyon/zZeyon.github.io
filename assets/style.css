@@ -197,3 +197,37 @@ a { color: #7A7C80; text-decoration: none; }
         justify-content: center; /* Los centramos, en móvil suele quedar mejor */
     }
 }
+
+/* --- BOTÓN DE IDIOMA --- */
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+}
+
+.lang-btn {
+    background-color: transparent;
+    color: #7A7C80;
+    border: 1px solid #7A7C80;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.05);
+}
+
+/* Ajuste del botón para móviles */
+@media(max-width:780px){
+    .lang-switch {
+        top: 15px;
+        right: 15px;
+    }
+}
